@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Galería de Kael Ardent</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body {
+      background: #121212;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+      color: #00ffff;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    a.back {
+      display: inline-block;
+      margin-top: 30px;
+      color: #ffcc00;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Galería de Imágenes</h1>
+
+  <div class="gallery">
+    <img src="img/galeria/forma-normal.jpg" alt="Kael - Forma Normal y Final">
+    <img src="img/galeria/con-jinwoo.jpg" alt="Kael con Jinwoo en Seúl">
+    <img src="img/galeria/batalla-lejana.jpg" alt="Kael y Jinwoo luchando desde lejos">
+    <img src="img/galeria/batalla-invocaciones.jpg" alt="Kael, Jinwoo y todas las sombras contra el Monarca">
+  </div>
+
+  <a class="back" href="index.html">← Volver a la historia</a>
+
+</body>
+</html>
