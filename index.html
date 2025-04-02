@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Kael Ardent - Dominador de Esencias</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 20px;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 0.2em;
+      color: #ffd700;
+    }
+
+    header h2 {
+      font-size: 1.2em;
+      font-weight: normal;
+      color: #aaa;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h3 {
+      color: #ffcc00;
+      border-bottom: 1px solid #444;
+      padding-bottom: 4px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      color: #00ffff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Kael Ardent</h1>
+    <h2>Dominador de Esencias</h2>
+  </header>
+
+  <section id="historia">
+    <h3>Historia</h3>
+    <p>
+      Kael era un joven brillante del mundo real, con la capacidad de ver patrones invisibles en las cosas. Durante un apagón global provocado por una anomalía mágica, quedó atrapado en una mazmorra clase S. 
+      Allí, fue elegido por el <span class="highlight">Núcleo Primigenio</span>, una reliquia que buscaba un portador capaz de dominar múltiples energías sin perder su humanidad.
+    </p>
+    <p>
+      Desde entonces, camina entre cazadores y monstruos. Su clase única le permite fusionar <em>sombra, luz y esencia vital</em>, siendo el primero y único <strong>Dominador de Esencias</strong>.
+      A pesar de sus poderes, teme más quedarse solo que morir.
+    </p>
+  </section>
+
+  <section>
+    <h3>Habilidades Principales</h3>
+    <ul>
+      <li><strong>Espada del Vínculo Esencial:</strong> cambia de forma según la esencia absorbida. Puede volverse etérea y atacar desde otra dimensión.</li>
+      <li><strong>Sombras Refractadas:</strong> invoca duplicados hechos de luz y sombra, que interactúan con el entorno.</li>
+      <li><strong>Código Rúnico: Aria del Vacío:</strong> ralentiza el tiempo durante 5 segundos reales. Cada uso borra parte de su memoria.</li>
+      <li><strong>Vínculo de Resonancia:</strong> une su esencia con otra para potenciar ambos, generando lazos tanto de poder como emocionales.</li>
+      <li><strong>Pasiva - Heredero del Núcleo:</strong> es inmune a magias elementales y puede detectar mentiras mágicas.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Personalidad</h3>
+    <p>
+      Observador, con una sonrisa que esconde un millón de pensamientos. Leal hasta que lo traicionan. Cree en las conexiones humanas, aunque haya perdido muchas. Siempre parece saber algo que nadie más ve.
+    </p>
+  </section>
+
+  <script>
+    // Animación simple al hacer scroll
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
